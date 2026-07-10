@@ -1,0 +1,74 @@
+<!-- ============ HERO CATEGORÍA ============ -->
+<section class="c-hero">
+  <div class="c-hero-media">
+    <img [src]="c().heroImg" [alt]="c().titleTop + ' ' + c().titleAccent" appParallax [speed]="0.2" fetchpriority="high" />
+  </div>
+  <div class="container c-hero-body">
+    <p class="eyebrow" appReveal>{{ c().eyebrow }}</p>
+    <h1 class="display" appReveal [revealDelay]="100">
+      {{ c().titleTop }} <span class="accent">{{ c().titleAccent }}</span>
+    </h1>
+    <p class="body-lg intro" appReveal [revealDelay]="200">{{ c().intro }}</p>
+    <div class="ctas" appReveal [revealDelay]="300">
+      <a class="btn btn-accent" [href]="site.whatsapp" target="_blank" rel="noopener">Pide tu presupuesto</a>
+      <a class="btn btn-outline" href="#galeria">Explorar galería</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <p class="eyebrow" appReveal>Nuestra galería</p>
+    <h2 class="headline" appReveal [revealDelay]="80">Trabajos reales</h2>
+    <p class="body-md muted gallery-sub" appReveal [revealDelay]="160">
+      Una selección de nuestras creaciones más precisas para clientes que no
+      aceptan menos que la perfección.
+    </p>
+    <div class="grid-wrap">
+      <app-product-grid [products]="c().products" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="process">
+  <div class="container">
+    <p class="eyebrow center" appReveal>El proceso PIQ3D</p>
+    <h2 class="headline center" appReveal [revealDelay]="80">Cómo trabajamos</h2>
+    <div class="steps">
+      @for (s of c().steps; track s.title; let i = $index) {
+        <div class="step" appReveal [revealDelay]="i * 140">
+          <div class="step-num">{{ i + 1 }}</div>
+          <h3 class="label">{{ s.title }}</h3>
+          <p class="body-md muted">{{ s.copy }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIO ============ -->
+<section class="quote-sec">
+  <div class="quote-media img-frame" appReveal>
+    <img [src]="c().quoteImg" [alt]="c().quoteAuthor" loading="lazy" appParallax [speed]="0.16" />
+  </div>
+  <blockquote class="quote-card" appReveal [revealDelay]="140">
+    <span class="q-mark">&ldquo;</span>
+    <p class="q-text">{{ c().quote }}</p>
+    <footer class="label q-author">— {{ c().quoteAuthor }}</footer>
+  </blockquote>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="container">
+  <div class="cta-card" appReveal>
+    <h2 class="headline">¿Tienes un evento?<br />Hablemos</h2>
+    <p class="body-md">
+      Convierte el reconocimiento en una obra de arte. Nuestro equipo está
+      listo para materializar tus ideas más ambiciosas.
+    </p>
+    <a class="btn btn-dark" [href]="site.whatsapp" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    <a class="btn btn-outline dark-outline" [href]="site.email">O mándanos un email</a>
+  </div>
+</section>

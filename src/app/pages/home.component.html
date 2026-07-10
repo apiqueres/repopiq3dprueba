@@ -1,0 +1,129 @@
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/img/trofeos/trofeoalaquas.jpeg" alt="Trofeo impreso en 3D por PIQ3D" appParallax [speed]="0.22" fetchpriority="high" />
+  </div>
+  <div class="hero-body container">
+    <h1 class="display" appReveal>Diseño<br />que se<br />toca</h1>
+    <p class="body-lg hero-copy" appReveal [revealDelay]="140">
+      Transformamos conceptos digitales en objetos físicos de alta precisión.
+      Fabricación aditiva de vanguardia para marcas y eventos que buscan la excelencia.
+    </p>
+    <a class="btn btn-outline" routerLink="/trofeos" appReveal [revealDelay]="260">Ver nuestros trabajos</a>
+  </div>
+</section>
+
+<!-- ============ TROFEOS ============ -->
+<section class="cat container">
+  <div class="cat-hero" appReveal>
+    <div class="img-frame tall">
+      <img src="assets/img/trofeos/trofeusuecasdarroz.jpeg" alt="Trofeos personalizados" loading="lazy" appParallax [speed]="0.14" />
+      <div class="cat-overlay">
+        <h2 class="headline light">Trofeos<br />personalizados</h2>
+        <a class="btn btn-accent" routerLink="/trofeos">Ver colección</a>
+      </div>
+    </div>
+  </div>
+
+  <article class="feature" appReveal>
+    <div class="img-frame">
+      <span class="badge badge-accent floating">Hecho a medida</span>
+      <img src="assets/img/trofeos/08_valencia_xiques_3x3.png" alt="Trofeo València Xiques 3x3" loading="lazy" appParallax [speed]="0.12" />
+    </div>
+    <h3 class="headline-md">València Xiques 3x3</h3>
+    <p class="feature-tag">Resina de alta densidad y acabado mate premium</p>
+  </article>
+</section>
+
+<!-- ============ MEDALLAS ============ -->
+<section class="cat container">
+  <div class="cat-hero" appReveal>
+    <div class="img-frame tall dark">
+      <img src="assets/img/medallas/medallasinfondo.png" alt="Medallas para eventos" loading="lazy" appParallax [speed]="0.14" />
+      <div class="cat-overlay">
+        <h2 class="headline light">Medallas<br />para eventos</h2>
+        <a class="btn btn-light" routerLink="/medallas">Ver colección</a>
+      </div>
+    </div>
+  </div>
+
+  <article class="feature" appReveal>
+    <div class="img-frame">
+      <img src="assets/img/medallas/valencia_xiques_anverso.jpg" alt="Medalla València Xiques" loading="lazy" appParallax [speed]="0.12" />
+    </div>
+    <h3 class="headline-md">València Xiques</h3>
+    <p class="feature-tag">Pedidos por volumen para clubes y carreras</p>
+  </article>
+</section>
+
+<!-- ============ LLAVEROS ============ -->
+<section class="cat container">
+  <article class="feature big" appReveal>
+    <div class="img-frame">
+      <img src="assets/img/merch/01_llaveros_club.png" alt="Llaveros corporativos" loading="lazy" appParallax [speed]="0.14" />
+    </div>
+    <h2 class="headline llav-title">Llaveros<br />corporativos</h2>
+    <p class="body-md muted">
+      Merchandising de impacto con acabados premium y diseño totalmente
+      personalizado para tu marca.
+    </p>
+    <a class="btn btn-accent llav-btn" routerLink="/merchandising">Ver colección</a>
+  </article>
+</section>
+
+<!-- ============ QRS PARA HOSTELERÍA ============ -->
+<section class="qr">
+  <div class="container">
+    <h2 class="headline light" appReveal>QRs para<br />hostelería</h2>
+    <p class="body-md qr-copy" appReveal [revealDelay]="120">
+      Soportes elegantes y duraderos. La primera impresión cuenta: haz que tu
+      carta digital sea parte de la decoración.
+    </p>
+    <a class="btn btn-outline light-btn" [href]="site.whatsapp" target="_blank" rel="noopener" appReveal [revealDelay]="220">Catálogo QR</a>
+
+    <div class="qr-cards">
+      @for (q of qrs; track q.img; let i = $index) {
+        <article class="qr-card" appReveal [revealDelay]="i * 100">
+          <div class="img-frame">
+            <img [src]="q.img" [alt]="q.name" loading="lazy" appParallax [speed]="0.10" />
+          </div>
+          <h3 class="label qr-name">{{ q.name }}</h3>
+          <p class="qr-tag">{{ q.tag }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOMENTOS ============ -->
+<section class="cat container">
+  <div class="duo">
+    <a class="img-frame duo-card" routerLink="/merchandising" appReveal>
+      <img src="assets/img/merch/02_figuritas.png" alt="Figuritas personalizadas" loading="lazy" appParallax [speed]="0.12" />
+      <div class="cat-overlay">
+        <h2 class="headline-md light duo-title">Figuritas<br />a medida</h2>
+        <span class="btn btn-light small">Ver más</span>
+      </div>
+    </a>
+    <a class="img-frame duo-card" routerLink="/merchandising" appReveal [revealDelay]="120">
+      <img src="assets/img/merch/imanes_regalo.png" alt="Recuerdos personalizados" loading="lazy" appParallax [speed]="0.12" />
+      <div class="cat-overlay">
+        <h2 class="headline-md light duo-title">Recuerdos<br />únicos</h2>
+        <span class="btn btn-light small">Ver más</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CONFIANZA ============ -->
+<section class="trust">
+  <div class="container">
+    @for (t of trust; track t.title; let i = $index) {
+      <div class="trust-item" appReveal [revealDelay]="i * 120">
+        <div class="trust-icon" [innerHTML]="t.icon"></div>
+        <h3 class="label">{{ t.title }}</h3>
+        <p class="body-md muted">{{ t.copy }}</p>
+      </div>
+    }
+  </div>
+</section>
