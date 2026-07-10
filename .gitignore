@@ -1,0 +1,6 @@
+# Material fuente pesado (no necesario para la web publicada)
+portfolio_PIQ3D.pdf
+assets/portfolio/
+
+# Config local
+.claude/
