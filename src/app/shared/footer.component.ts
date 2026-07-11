@@ -8,9 +8,6 @@ import { SITE } from '../site';
   template: `
     <footer class="footer">
       <div class="container">
-        <div class="logo-chip">
-          <img src="assets/img/logo/logo_piq3d.png" alt="Logotipo PIQ3D" loading="lazy" />
-        </div>
         <p class="logo">PIQ3D</p>
         <p class="body-md tagline">
           La nueva era de la fabricación personalizada. Diseñamos y producimos
@@ -62,19 +59,6 @@ import { SITE } from '../site';
       color: #f0f1f1;
       padding-block: 64px 40px;
       margin-top: 0;
-    }
-    .logo-chip {
-      width: 150px;
-      height: 52px;
-      border-radius: var(--r-md);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f9f7dc;
-      margin-bottom: 16px;
-
-      img { width: 300px; max-width: none; }
     }
     .logo { font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
     .tagline { color: #b9bcbc; margin-top: 14px; max-width: 42ch; }

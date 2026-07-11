@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { SITE } from '../site';
+import { QRS, SITE } from '../site';
 import { RevealDirective } from '../shared/reveal.directive';
 import { ParallaxDirective } from '../shared/parallax.directive';
 
@@ -28,11 +28,7 @@ export class HomeComponent {
 
   readonly site = SITE;
 
-  readonly qrs = [
-    { img: 'assets/img/trofeos/_carta_luisvives.png', name: 'Soporte carta', tag: 'Diseño orgánico' },
-    { img: 'assets/img/trofeos/_carta_paelles.png', name: 'Soporte evento', tag: 'Minimalismo puro' },
-    { img: 'assets/img/merch/_carta_llaveros.jpeg', name: 'Carta llaveros', tag: 'Variedad cromática' },
-  ];
+  readonly qrs = QRS;
 
   readonly trust: TrustItem[] = [
     {

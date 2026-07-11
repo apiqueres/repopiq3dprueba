@@ -27,7 +27,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     titleAccent: 'victorias',
     intro:
       'Diseño y fabricación aditiva de alta precisión para eventos que buscan la excelencia. Piezas únicas que perduran en el tiempo.',
-    heroImg: 'assets/img/trofeos/09_fibravalencia_alaquas.png',
+    heroImg: 'assets/img/trofeos/07_trofeu_puchades.png',
     products: TROFEOS,
     steps: [
       { title: 'Nos cuentas tu idea', copy: 'Analizamos tus necesidades, el propósito del evento y el estilo que buscas transmitir.' },
@@ -36,7 +36,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     ],
     quote: '"El trofeo superó nuestras expectativas. Increíble."',
     quoteAuthor: 'Director de eventos · Torneo 3x3',
-    quoteImg: 'assets/img/trofeos/trofeos3x3.jpeg',
+    quoteImg: 'assets/img/trofeos/08_valencia_xiques_3x3.png',
   },
   medallas: {
     eyebrow: 'Categoría medallas',
@@ -70,7 +70,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     ],
     quote: '"Los llaveros volaron el primer día del torneo."',
     quoteAuthor: 'Club deportivo · Valencia',
-    quoteImg: 'assets/img/merch/whatsapp_image_2026-05-28_at_13.52.10.jpeg',
+    quoteImg: 'assets/img/merch/03_llaveros.png',
   },
 };
 

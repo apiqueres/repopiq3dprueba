@@ -125,6 +125,54 @@
 .duo-title { text-transform: uppercase; }
 .small { min-height: 40px; padding: 8px 18px; font-size: 11px; }
 
+/* ---------- Material / sostenibilidad ---------- */
+.pla {
+  background: #eef3ec;
+}
+
+.eco { color: #3e7c4f; }
+
+.pla-grid {
+  display: grid;
+  gap: 36px;
+}
+
+.pla-media {
+  aspect-ratio: 4 / 5;
+  background: #fff;
+}
+
+.pla-copy { margin-block: 18px 14px; }
+
+.pla-points {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+
+  li {
+    position: relative;
+    padding-left: 34px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--on-surface-variant);
+
+    strong { color: var(--on-surface); }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #3e7c4f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat;
+    }
+  }
+}
+
 /* ---------- Trust ---------- */
 .trust {
   background: var(--surface-container-low);
@@ -168,6 +216,7 @@
   }
 
   .qr { margin-inline: 24px; }
+  .pla-grid { grid-template-columns: 1fr 1.1fr; align-items: center; gap: 56px; }
   .qr-cards { grid-template-columns: repeat(3, 1fr); }
   .duo { grid-template-columns: 1fr 1fr; }
   .trust .container { grid-template-columns: repeat(3, 1fr); }
