@@ -26,11 +26,12 @@ export const TROFEOS: Product[] = [
 ];
 
 export const MEDALLAS: Product[] = [
-  { img: 'assets/img/medallas/medallasenselimits.png', name: '10K Sense Límits', tag: 'Carrera popular', badge: 'Edición 2026', desc: 'Medalla en PLA multicolor con cinta personalizada.' },
-  { img: 'assets/img/medallas/01_ch_sueca_handbol.png', name: 'CH Sueca Handbol', tag: 'Pedidos por volumen', badge: 'Club', desc: 'Medalla de club con cinta personalizada.' },
-  { img: 'assets/img/medallas/valencia_xiques_reverso.jpg', name: 'València Xiques · Reverso', tag: 'Serie deportiva', desc: 'Reverso grabado con detalle fino.' },
-  { img: 'assets/img/medallas/medallasinfondo.png', name: 'Colección PIQ3D', tag: 'Multicolor', badge: 'Colección', desc: 'Variedad cromática para cada categoría.' },
-  { img: 'assets/img/medallas/medallas_partetrasera.png', name: 'Acabado posterior', tag: 'Detalle', desc: 'Cuidamos también la cara que no se ve.' },
+  { img: 'assets/img/medallas/medallasenselimitsfondo.jpeg', name: '10K Sense Límits', tag: 'Carrera popular' },
+  { img: 'assets/img/medallas/medallachsueca.jpeg', name: 'CH Sueca Handbol', tag: 'Pedidos por volumen' },
+  { img: 'assets/img/medallas/valencia_xiques_reverso.jpg', name: 'València Xiques · Reverso', tag: 'Serie deportiva' },
+  { img: 'assets/img/medallas/medallasinfondo.png', name: 'Colección PIQ3D', tag: 'Multicolor' },
+  { img: 'assets/img/medallas/medallasenselimits.png', name: '10K Sense Límits · Detalle', tag: 'Color integrado' },
+  { img: 'assets/img/medallas/medallas_partetrasera.png', name: 'Acabado posterior', tag: 'Detalle' },
 ];
 
 export const MERCH: Product[] = [
@@ -40,6 +41,7 @@ export const MERCH: Product[] = [
   { img: 'assets/img/merch/05_pin_falla.png', name: 'Pin de falla', tag: 'Tradición', desc: 'Detalle fallero con acabado brillante.' },
   { img: 'assets/img/merch/06_imanes.png', name: 'Imanes', tag: 'Regalo de evento', desc: 'Recuerdos que se quedan en la nevera.' },
   { img: 'assets/img/merch/imanes_regalo.png', name: 'Imanes regalo', tag: 'Packs', desc: 'Packs listos para regalar.' },
+  { img: 'assets/img/merch/copitas_ad_esperanza.jpeg', name: 'Copitas AD Esperanza', tag: 'Debutantes 2025-26', desc: 'Recuerdo personalizado para cada debutante.' },
 ];
 
 export const QRS: Product[] = [

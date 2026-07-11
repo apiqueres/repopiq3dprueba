@@ -54,8 +54,7 @@
     <img [src]="c().quoteImg" [alt]="c().titleTop + ' ' + c().titleAccent" loading="lazy" appParallax [speed]="0.16" />
   </div>
   <blockquote class="quote-card" appReveal [revealDelay]="140">
-    <span class="q-mark">&ldquo;</span>
-    <p class="q-text">{{ c().quote }}&nbsp;<span class="q-mark q-close">&rdquo;</span></p>
+    <p class="q-text"><span class="q-mark">&ldquo;</span>&nbsp;{{ c().quote }}&nbsp;<span class="q-mark">&rdquo;</span></p>
   </blockquote>
 </section>
 

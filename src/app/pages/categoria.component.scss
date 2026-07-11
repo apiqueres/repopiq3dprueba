@@ -90,39 +90,33 @@
 
 .quote-media {
   border-radius: 0;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
 }
 
 .quote-card {
   margin: 0;
   background: #0a0a0a;
   color: #fff;
-  padding: 44px var(--margin-mobile) 52px;
-}
-
-.q-mark {
-  font-size: 64px;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: .6;
-  display: block;
+  padding: 40px var(--margin-mobile) 44px;
 }
 
 .q-text {
-  margin-top: 22px;
-  font-size: clamp(26px, 7vw, 34px);
+  margin: 0;
+  font-size: clamp(24px, 6vw, 32px);
   font-weight: 800;
   font-style: italic;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -.02em;
   text-transform: uppercase;
 }
 
-.q-close {
-  display: inline;
-  font-size: 1.4em;
+/* comillas naranjas integradas en la misma línea que el texto */
+.q-mark {
+  color: var(--accent);
+  font-size: 1.35em;
+  font-style: normal;
   line-height: 0;
-  vertical-align: -.35em;
+  vertical-align: -.28em;
 }
 
 /* ---------- CTA final ---------- */
@@ -145,10 +139,15 @@
 
   .quote-sec {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: stretch;
 
-    .quote-media { aspect-ratio: auto; height: 100%; }
-    .quote-card { display: flex; flex-direction: column; justify-content: center; padding: 72px; }
+    .quote-media {
+      aspect-ratio: auto;
+      height: 100%;
+      max-height: 440px;
+    }
+    .quote-card { display: flex; flex-direction: column; justify-content: center; padding: 56px 64px; }
   }
 
   .cta-card { padding: 72px; }

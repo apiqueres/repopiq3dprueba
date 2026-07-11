@@ -9,7 +9,7 @@ import { SITE } from '../site';
     <div class="topbar label">Envíos a toda España · Diseño 100% personalizado</div>
     <div class="sticky-wrap">
       <header class="header">
-        <a routerLink="/" class="brand" aria-label="PIQ3D, inicio">PIQ3D</a>
+        <a routerLink="/" class="brand" aria-label="PIQ3D, inicio">PIQ<span class="accent">3D</span></a>
         <a class="btn btn-accent cta" [href]="wa" target="_blank" rel="noopener">Pide tu presupuesto</a>
       </header>
       <nav class="nav" aria-label="Secciones">

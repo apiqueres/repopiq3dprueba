@@ -34,7 +34,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Fabricamos y entregamos', copy: 'Tecnología de fabricación aditiva de última generación y acabados artesanales.' },
     ],
     quote: 'El trofeo superó nuestras expectativas. Increíble.',
-    quoteImg: 'assets/img/trofeos/08_valencia_xiques_3x3.png',
+    quoteImg: 'assets/img/trofeos/3x3xiques_cita.jpeg',
   },
   medallas: {
     eyebrow: 'Categoría medallas',
@@ -42,7 +42,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     titleAccent: 'se ganan',
     intro:
       'Detrás de cada medalla hay meses de esfuerzo. Diseñamos piezas que tus participantes querrán lucir mucho después de cruzar la meta: haz que tu evento se recuerde.',
-    heroImg: 'assets/img/medallas/medallas_partetrasera.png',
+    heroImg: 'assets/img/medallas/bannerseccionmedallas.jpeg',
     products: MEDALLAS,
     steps: [
       { title: 'Nos cuentas tu evento', copy: 'Compartes tu visión, el número de participantes y el estilo que buscas para tus medallas.' },
@@ -50,7 +50,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Entregamos', copy: 'Producción aditiva industrial con control de calidad unitario y envío directo a tu sede.' },
     ],
     quote: 'La calidad de las medallas dejó al club encantado.',
-    quoteImg: 'assets/img/medallas/01_ch_sueca_handbol_tall.png',
+    quoteImg: 'assets/img/medallas/medallachsueca.jpeg',
   },
   merchandising: {
     eyebrow: 'Merchandising premium',
