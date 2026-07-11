@@ -16,7 +16,6 @@ interface CategoryContent {
   products: Product[];
   steps: { title: string; copy: string }[];
   quote: string;
-  quoteAuthor: string;
   quoteImg: string;
 }
 
@@ -34,8 +33,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Diseñamos en 3D', copy: 'Creamos prototipos digitales de alta fidelidad para que visualices el resultado final antes de imprimir.' },
       { title: 'Fabricamos y entregamos', copy: 'Tecnología de fabricación aditiva de última generación y acabados artesanales.' },
     ],
-    quote: '"El trofeo superó nuestras expectativas. Increíble."',
-    quoteAuthor: 'Director de eventos · Torneo 3x3',
+    quote: 'El trofeo superó nuestras expectativas. Increíble.',
     quoteImg: 'assets/img/trofeos/08_valencia_xiques_3x3.png',
   },
   medallas: {
@@ -43,7 +41,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     titleTop: 'Medallas que',
     titleAccent: 'se ganan',
     intro:
-      'Diseño y fabricación aditiva de alta precisión para eventos que buscan la excelencia. Transformamos el esfuerzo en objetos de deseo.',
+      'Detrás de cada medalla hay meses de esfuerzo. Diseñamos piezas que tus participantes querrán lucir mucho después de cruzar la meta: haz que tu evento se recuerde.',
     heroImg: 'assets/img/medallas/medallas_partetrasera.png',
     products: MEDALLAS,
     steps: [
@@ -51,8 +49,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Diseñamos con tu logo', copy: 'Nuestros diseñadores crean un modelo 3D exclusivo integrando tu identidad visual y relieves.' },
       { title: 'Entregamos', copy: 'Producción aditiva industrial con control de calidad unitario y envío directo a tu sede.' },
     ],
-    quote: '"La calidad de las medallas dejó al club encantado."',
-    quoteAuthor: 'Organización · CH Sueca Handbol',
+    quote: 'La calidad de las medallas dejó al club encantado.',
     quoteImg: 'assets/img/medallas/01_ch_sueca_handbol_tall.png',
   },
   merchandising: {
@@ -68,8 +65,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Diseñamos la pieza', copy: 'Modelamos en 3D cada detalle integrando tu logotipo y colores corporativos.' },
       { title: 'Producimos en serie', copy: 'Desde 10 hasta miles de unidades con calidad constante y plazos cortos.' },
     ],
-    quote: '"Los llaveros volaron el primer día del torneo."',
-    quoteAuthor: 'Club deportivo · Valencia',
+    quote: 'Los llaveros volaron el primer día del torneo.',
     quoteImg: 'assets/img/merch/03_llaveros.png',
   },
 };

@@ -118,7 +118,12 @@
   text-transform: uppercase;
 }
 
-.q-author { margin-top: 24px; color: #b9bcbc; }
+.q-close {
+  display: inline;
+  font-size: 1.4em;
+  line-height: 0;
+  vertical-align: -.35em;
+}
 
 /* ---------- CTA final ---------- */
 .cta-card {

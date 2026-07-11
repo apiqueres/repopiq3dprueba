@@ -51,12 +51,11 @@
 <!-- ============ TESTIMONIO ============ -->
 <section class="quote-sec">
   <div class="quote-media img-frame" appReveal>
-    <img [src]="c().quoteImg" [alt]="c().quoteAuthor" loading="lazy" appParallax [speed]="0.16" />
+    <img [src]="c().quoteImg" [alt]="c().titleTop + ' ' + c().titleAccent" loading="lazy" appParallax [speed]="0.16" />
   </div>
   <blockquote class="quote-card" appReveal [revealDelay]="140">
     <span class="q-mark">&ldquo;</span>
-    <p class="q-text">{{ c().quote }}</p>
-    <footer class="label q-author">— {{ c().quoteAuthor }}</footer>
+    <p class="q-text">{{ c().quote }}&nbsp;<span class="q-mark q-close">&rdquo;</span></p>
   </blockquote>
 </section>
 

@@ -4,10 +4,10 @@
     <img src="assets/img/trofeos/09_fibravalencia_alaquas.png" alt="Trofeo impreso en 3D por PIQ3D" appParallax [speed]="0.22" fetchpriority="high" />
   </div>
   <div class="hero-body container">
-    <h1 class="display" appReveal>Diseño<br />que se<br />toca</h1>
+    <h1 class="display" appReveal>Que tu próximo <span class="accent">evento</span> no pase desapercibido</h1>
     <p class="body-lg hero-copy" appReveal [revealDelay]="140">
-      Transformamos conceptos digitales en objetos físicos de alta precisión.
-      Fabricación aditiva de vanguardia para marcas y eventos que buscan la excelencia.
+      Trofeos, medallas y detalles impresos en 3D con materiales biodegradables
+      de origen vegetal. Crea piezas memorables cuidando el planeta: súmate al cambio.
     </p>
     <a class="btn btn-outline" routerLink="/trofeos" appReveal [revealDelay]="260">Ver nuestros trabajos</a>
   </div>
@@ -15,7 +15,7 @@
 
 <!-- ============ TROFEOS ============ -->
 <section class="cat container">
-  <div class="cat-hero" appReveal>
+  <div class="cat-hero" appReveal revealFrom="left">
     <div class="img-frame tall">
       <img src="assets/img/trofeos/10_sueca_arros_sds.png" alt="Trofeos personalizados" loading="lazy" appParallax [speed]="0.14" />
       <div class="cat-overlay">
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <article class="feature" appReveal>
+  <article class="feature" appReveal revealFrom="right">
     <div class="img-frame">
       <span class="badge badge-accent floating">Hecho a medida</span>
       <img src="assets/img/trofeos/08_valencia_xiques_3x3.png" alt="Trofeo València Xiques 3x3" loading="lazy" appParallax [speed]="0.12" />
@@ -37,7 +37,7 @@
 
 <!-- ============ MEDALLAS ============ -->
 <section class="cat container">
-  <div class="cat-hero" appReveal>
+  <div class="cat-hero" appReveal revealFrom="right">
     <div class="img-frame tall dark">
       <img src="assets/img/medallas/medallasinfondo.png" alt="Medallas para eventos" loading="lazy" appParallax [speed]="0.14" />
       <div class="cat-overlay">
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <article class="feature" appReveal>
+  <article class="feature" appReveal revealFrom="left">
     <div class="img-frame">
       <img src="assets/img/medallas/medallasenselimits.png" alt="Medalla 10K Sense Límits" loading="lazy" appParallax [speed]="0.12" />
     </div>
@@ -58,16 +58,16 @@
 
 <!-- ============ LLAVEROS ============ -->
 <section class="cat container">
-  <article class="feature big" appReveal>
-    <div class="img-frame">
+  <article class="feature big">
+    <div class="img-frame" appReveal revealFrom="left">
       <img src="assets/img/merch/01_llaveros_club.png" alt="Llaveros corporativos" loading="lazy" appParallax [speed]="0.14" />
     </div>
-    <h2 class="headline llav-title">Llaveros<br />corporativos</h2>
-    <p class="body-md muted">
+    <h2 class="headline llav-title" appReveal revealFrom="right">Llaveros<br />corporativos</h2>
+    <p class="body-md muted" appReveal revealFrom="right" [revealDelay]="120">
       Merchandising de impacto con acabados premium y diseño totalmente
       personalizado para tu marca.
     </p>
-    <a class="btn btn-accent llav-btn" routerLink="/merchandising">Ver colección</a>
+    <a class="btn btn-accent llav-btn" appReveal revealFrom="right" [revealDelay]="220" routerLink="/merchandising">Ver colección</a>
   </article>
 </section>
 
@@ -84,34 +84,14 @@
     <div class="qr-cards">
       @for (q of qrs; track q.img; let i = $index) {
         <article class="qr-card" appReveal [revealDelay]="i * 100">
-          <div class="img-frame">
-            <img [src]="q.img" [alt]="q.name" loading="lazy" appParallax [speed]="0.10" />
+          <div class="qr-img">
+            <img [src]="q.img" [alt]="q.name" loading="lazy" />
           </div>
           <h3 class="label qr-name">{{ q.name }}</h3>
           <p class="qr-tag">{{ q.tag }}</p>
         </article>
       }
     </div>
-  </div>
-</section>
-
-<!-- ============ MOMENTOS ============ -->
-<section class="cat container">
-  <div class="duo">
-    <a class="img-frame duo-card" routerLink="/merchandising" appReveal>
-      <img src="assets/img/merch/02_figuritas.png" alt="Figuritas personalizadas" loading="lazy" appParallax [speed]="0.12" />
-      <div class="cat-overlay">
-        <h2 class="headline-md light duo-title">Figuritas<br />a medida</h2>
-        <span class="btn btn-light small">Ver más</span>
-      </div>
-    </a>
-    <a class="img-frame duo-card" routerLink="/merchandising" appReveal [revealDelay]="120">
-      <img src="assets/img/merch/imanes_regalo.png" alt="Recuerdos personalizados" loading="lazy" appParallax [speed]="0.12" />
-      <div class="cat-overlay">
-        <h2 class="headline-md light duo-title">Recuerdos<br />únicos</h2>
-        <span class="btn btn-light small">Ver más</span>
-      </div>
-    </a>
   </div>
 </section>
 

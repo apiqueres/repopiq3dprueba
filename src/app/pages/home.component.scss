@@ -36,9 +36,11 @@
   padding-block: 64px 72px;
 }
 
+.hero-body .display { max-width: 16ch; }
+
 .hero-copy {
   margin-block: 22px 30px;
-  max-width: 34ch;
+  max-width: 44ch;
   color: rgba(255, 255, 255, .88);
 }
 
@@ -104,26 +106,31 @@
   background: #1d1d1d;
   border-radius: var(--r-lg);
   padding: 18px;
-
-  .img-frame { aspect-ratio: 16 / 10; border-radius: var(--r-md); }
 }
+
+/* las fotos de QRs son verticales: se muestran completas, sin recortes */
+.qr-img {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-md);
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform .6s var(--ease-out);
+  }
+}
+
+.qr-card:hover .qr-img img { transform: scale(1.04); }
 
 .qr-name { margin-top: 16px; }
 .qr-tag { color: #9a9d9d; font-size: 12.5px; margin-top: 3px; }
-
-/* ---------- Momentos duo ---------- */
-.duo {
-  display: grid;
-  gap: 24px;
-}
-
-.duo-card {
-  aspect-ratio: 3 / 4;
-  display: block;
-}
-
-.duo-title { text-transform: uppercase; }
-.small { min-height: 40px; padding: 8px 18px; font-size: 11px; }
 
 /* ---------- Material / sostenibilidad ---------- */
 .pla {
@@ -218,6 +225,5 @@
   .qr { margin-inline: 24px; }
   .pla-grid { grid-template-columns: 1fr 1.1fr; align-items: center; gap: 56px; }
   .qr-cards { grid-template-columns: repeat(3, 1fr); }
-  .duo { grid-template-columns: 1fr 1fr; }
   .trust .container { grid-template-columns: repeat(3, 1fr); }
 }

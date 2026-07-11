@@ -1,26 +1,19 @@
 import { Component, input } from '@angular/core';
 import { Product } from '../site';
 import { RevealDirective } from './reveal.directive';
-import { ParallaxDirective } from './parallax.directive';
 
 @Component({
   selector: 'app-product-grid',
-  imports: [RevealDirective, ParallaxDirective],
+  imports: [RevealDirective],
   template: `
     <div class="grid">
       @for (p of products(); track p.img; let i = $index) {
         <article class="card" appReveal [revealDelay]="(i % 2) * 90">
-          <div class="img-frame">
-            @if (p.badge) {
-              <span class="badge badge-dark floating">{{ p.badge }}</span>
-            }
-            <img [src]="p.img" [alt]="p.name" loading="lazy" appParallax [speed]="0.10" />
+          <div class="pic">
+            <img [src]="p.img" [alt]="p.name" loading="lazy" />
           </div>
           <h3 class="headline-md name">{{ p.name }}</h3>
           <p class="tag">{{ p.tag }}</p>
-          @if (p.desc) {
-            <p class="body-md muted desc">{{ p.desc }}</p>
-          }
         </article>
       }
     </div>
@@ -34,16 +27,27 @@ import { ParallaxDirective } from './parallax.directive';
     @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
     @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
 
-    .card .img-frame {
+    /* la imagen se muestra completa, sin recortes */
+    .pic {
       aspect-ratio: 4 / 5;
-      background: var(--surface-container-low);
+      border-radius: var(--r-lg);
+      background: var(--surface-container-lowest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 14px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform .6s var(--ease-out);
+      }
     }
-    .floating {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      z-index: 2;
-    }
+
+    .card:hover .pic img { transform: scale(1.04); }
+
     .name { margin-top: 16px; text-transform: uppercase; font-size: 18px; letter-spacing: -.01em; }
     .tag {
       margin-top: 4px;
@@ -53,7 +57,6 @@ import { ParallaxDirective } from './parallax.directive';
       letter-spacing: .06em;
       text-transform: uppercase;
     }
-    .desc { margin-top: 6px; font-size: 14px; }
   `,
 })
 export class ProductGridComponent {
