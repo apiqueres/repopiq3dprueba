@@ -28,16 +28,12 @@ export const TROFEOS: Product[] = [
 export const MEDALLAS: Product[] = [
   { img: 'assets/img/medallas/medallasenselimitsfondo.jpeg', name: '10K Sense Límits', tag: 'Carrera popular' },
   { img: 'assets/img/medallas/medallachsueca.jpeg', name: 'CH Sueca Handbol', tag: 'Pedidos por volumen' },
-  { img: 'assets/img/medallas/valencia_xiques_reverso.jpg', name: 'València Xiques · Reverso', tag: 'Serie deportiva' },
-  { img: 'assets/img/medallas/medallasinfondo.png', name: 'Colección PIQ3D', tag: 'Multicolor' },
-  { img: 'assets/img/medallas/medallasenselimits.png', name: '10K Sense Límits · Detalle', tag: 'Color integrado' },
-  { img: 'assets/img/medallas/medallas_partetrasera.png', name: 'Acabado posterior', tag: 'Detalle' },
+  { img: 'assets/img/medallas/medallaconfondo.jpeg', name: 'València Xiques 3x3', tag: 'Serie deportiva' },
 ];
 
 export const MERCH: Product[] = [
   { img: 'assets/img/merch/01_llaveros_club.png', name: 'Llaveros de club', tag: 'Corporativo', badge: 'Volumen', desc: 'Merchandising de impacto para tu afición.' },
   { img: 'assets/img/merch/03_llaveros.png', name: 'Llaveros personalizados', tag: 'Detalle premium', desc: 'Con tu logo, en cualquier color.' },
-  { img: 'assets/img/merch/02_figuritas.png', name: 'Figuritas', tag: 'Hecho a medida', badge: 'Top ventas', desc: 'Personajes y mascotas en miniatura.' },
   { img: 'assets/img/merch/05_pin_falla.png', name: 'Pin de falla', tag: 'Tradición', desc: 'Detalle fallero con acabado brillante.' },
   { img: 'assets/img/merch/06_imanes.png', name: 'Imanes', tag: 'Regalo de evento', desc: 'Recuerdos que se quedan en la nevera.' },
   { img: 'assets/img/merch/imanes_regalo.png', name: 'Imanes regalo', tag: 'Packs', desc: 'Packs listos para regalar.' },

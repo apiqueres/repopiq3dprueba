@@ -86,23 +86,35 @@
 }
 
 /* ---------- Testimonio ---------- */
-.quote-sec { padding-block: 0 0; }
+.quote-sec {
+  padding-block: 0 0;
+  background: #0a0a0a;
+}
 
+/* la foto se muestra entera, sin recortes, sobre el fondo negro */
 .quote-media {
-  border-radius: 0;
-  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px var(--margin-mobile) 0;
+
+  img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    border-radius: var(--r-lg);
+  }
 }
 
 .quote-card {
   margin: 0;
-  background: #0a0a0a;
   color: #fff;
-  padding: 40px var(--margin-mobile) 44px;
+  padding: 36px var(--margin-mobile) 52px;
 }
 
 .q-text {
   margin: 0;
-  font-size: clamp(24px, 6vw, 32px);
+  font-size: clamp(28px, 7vw, 38px);
   font-weight: 800;
   font-style: italic;
   line-height: 1.25;
@@ -140,12 +152,12 @@
   .quote-sec {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
-    align-items: stretch;
+    align-items: center;
 
     .quote-media {
-      aspect-ratio: auto;
-      height: 100%;
-      max-height: 440px;
+      padding: 48px 0 48px 64px;
+
+      img { max-width: 520px; }
     }
     .quote-card { display: flex; flex-direction: column; justify-content: center; padding: 56px 64px; }
   }
