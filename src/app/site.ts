@@ -1,9 +1,6 @@
-/**
- * Datos de contacto y catálogo del sitio.
- * TODO(Alejandro): revisa el número de WhatsApp y el usuario de Instagram.
- */
+/** Datos de contacto y catálogo del sitio. */
 export const SITE = {
-  whatsapp: 'https://wa.me/34600000000?text=Hola%20PIQ3D%2C%20quiero%20pedir%20presupuesto',
+  whatsapp: 'https://wa.me/34623754444?text=Hola%20PIQ3D%2C%20quiero%20pedir%20presupuesto',
   email: 'mailto:alevaljau01@gmail.com?subject=Presupuesto%20PIQ3D',
   instagram: 'https://www.instagram.com/piq3d',
   ubicacion: 'Valencia, España',
