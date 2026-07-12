@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
-import { MEDALLAS, MERCH, Product, SITE, TROFEOS } from '../site';
+import { MEDALLAS, MERCH, Product, QRS, SITE, TROFEOS } from '../site';
 import { RevealDirective } from '../shared/reveal.directive';
 import { ParallaxDirective } from '../shared/parallax.directive';
 import { ProductGridComponent } from '../shared/product-grid.component';
@@ -67,6 +67,22 @@ const CATEGORIES: Record<string, CategoryContent> = {
     ],
     quote: 'Los llaveros volaron el primer día del torneo.',
     quoteImg: 'assets/img/merch/03_llaveros.png',
+  },
+  qrs: {
+    eyebrow: 'QRs personalizados',
+    titleTop: 'La primera impresión',
+    titleAccent: 'cuenta',
+    intro:
+      'Soportes QR y NFC impresos en 3D para restaurantes, bares y negocios. Haz que tu carta digital sea parte de la decoración, con tu logo y tus colores.',
+    heroImg: 'assets/img/qr/caquitin.png',
+    products: QRS,
+    steps: [
+      { title: 'Nos cuentas tu negocio', copy: 'Tu carta, tu estilo y el ambiente de tu local: buscamos el soporte que mejor encaje.' },
+      { title: 'Diseñamos tu soporte', copy: 'Integramos tu logotipo, tus colores y el QR en relieve; con chip NFC opcional.' },
+      { title: 'Imprimimos y entregamos', copy: 'Piezas duraderas y fáciles de limpiar, listas para colocar en cada mesa.' },
+    ],
+    quote: 'Los clientes escanean la carta y siempre preguntan por el soporte.',
+    quoteImg: 'assets/img/qr/sushiroom_delantero.png',
   },
 };
 

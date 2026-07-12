@@ -17,6 +17,7 @@ import { SITE } from '../site';
         <a routerLink="/trofeos" routerLinkActive="active">Trofeos</a>
         <a routerLink="/medallas" routerLinkActive="active">Medallas</a>
         <a routerLink="/merchandising" routerLinkActive="active">Merchandising</a>
+        <a routerLink="/qrs" routerLinkActive="active">QRs</a>
       </nav>
     </div>
   `,

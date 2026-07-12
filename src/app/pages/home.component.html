@@ -79,7 +79,7 @@
       Soportes elegantes y duraderos. La primera impresión cuenta: haz que tu
       carta digital sea parte de la decoración.
     </p>
-    <a class="btn btn-outline light-btn" [href]="site.whatsapp" target="_blank" rel="noopener" appReveal [revealDelay]="220">Catálogo QR</a>
+    <a class="btn btn-outline light-btn" routerLink="/qrs" appReveal [revealDelay]="220">Catálogo QR</a>
 
     <div class="qr-cards">
       @for (q of qrs; track q.img; let i = $index) {

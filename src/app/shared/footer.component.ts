@@ -21,7 +21,7 @@ import { SITE } from '../site';
               <li><a routerLink="/trofeos">Trofeos</a></li>
               <li><a routerLink="/medallas">Medallas</a></li>
               <li><a routerLink="/merchandising">Llaveros</a></li>
-              <li><a [href]="site.whatsapp" target="_blank" rel="noopener">QRs</a></li>
+              <li><a routerLink="/qrs">QRs</a></li>
             </ul>
           </div>
           <div>
