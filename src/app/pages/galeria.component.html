@@ -1,0 +1,43 @@
+<section class="g-head">
+  <div class="container">
+    <p class="eyebrow" appReveal>Nuestra galería</p>
+    <h1 class="headline" appReveal [revealDelay]="80">Todos nuestros<br />trabajos</h1>
+    <p class="body-md muted g-sub" appReveal [revealDelay]="160">
+      Toca cualquier imagen para verla en grande.
+    </p>
+
+    <div class="chips" appReveal [revealDelay]="220">
+      @for (f of filters; track f) {
+        <button
+          class="chip"
+          [class.on]="filter() === f"
+          type="button"
+          (click)="setFilter(f)"
+        >{{ labels[f] }}</button>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="g-grid-sec">
+  <div class="container">
+    <div class="g-grid">
+      @for (item of items(); track item.img; let i = $index) {
+        <button class="g-cell" type="button" (click)="open(i)" [attr.aria-label]="'Ampliar imagen de ' + labels[item.cat]">
+          <img [src]="item.img" [alt]="'Trabajo PIQ3D — ' + labels[item.cat]" loading="lazy" />
+          <span class="g-cat label">{{ labels[item.cat] }}</span>
+        </button>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISOR ============ -->
+@if (current(); as item) {
+  <div class="lightbox" (click)="close()">
+    <button class="lb-btn lb-close" type="button" aria-label="Cerrar" (click)="close(); $event.stopPropagation()">✕</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Anterior" (click)="prev(); $event.stopPropagation()">‹</button>
+    <img [src]="item.img" [alt]="'Trabajo PIQ3D — ' + labels[item.cat]" (click)="$event.stopPropagation()" />
+    <button class="lb-btn lb-next" type="button" aria-label="Siguiente" (click)="next(); $event.stopPropagation()">›</button>
+  </div>
+}

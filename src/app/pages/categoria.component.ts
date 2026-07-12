@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { MEDALLAS, MERCH, Product, QRS, SITE, TROFEOS } from '../site';
@@ -88,7 +88,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
 
 @Component({
   selector: 'app-categoria',
-  imports: [RevealDirective, ParallaxDirective, ProductGridComponent],
+  imports: [RouterLink, RevealDirective, ParallaxDirective, ProductGridComponent],
   templateUrl: './categoria.component.html',
   styleUrl: './categoria.component.scss',
 })

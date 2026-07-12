@@ -45,3 +45,58 @@ export const QRS: Product[] = [
   { img: 'assets/img/qr/caquitin.png', name: 'Ca Quintín', tag: 'Soporte bicolor' },
   { img: 'assets/img/qr/sushiroom_de_lado.png', name: 'Vista de perfil', tag: 'Diseño esbelto' },
 ];
+
+/* ---------- Galería completa (página oculta /galeria) ---------- */
+
+export interface GaleriaItem {
+  img: string;
+  cat: 'trofeos' | 'medallas' | 'merchandising' | 'qrs';
+}
+
+const g = (cat: GaleriaItem['cat'], folder: string, files: string[]): GaleriaItem[] =>
+  files.map(f => ({ img: `assets/img/${folder}/${f}`, cat }));
+
+export const GALERIA: GaleriaItem[] = [
+  ...g('trofeos', 'trofeos', [
+    'trofeofibravalencia.jpeg',
+    'trofeos_inicio.jpeg',
+    '3x3xiques_cita.jpeg',
+    'trofeo_material.jpeg',
+    '09_fibravalencia_alaquas.png',
+    '08_valencia_xiques_3x3.png',
+    '07_trofeu_puchades.png',
+    '02_torneig_f8.png',
+    '05_ch_sueca_mareny.png',
+    '10_sueca_arros_sds.png',
+    'fallasucro.png',
+    '03_pbrb_50anys.png',
+    '_carta_luisvives.png',
+    '_carta_paelles.png',
+  ]),
+  ...g('medallas', 'medallas', [
+    'medallasenselimitsfondo.jpeg',
+    'medallachsueca.jpeg',
+    'medallaconfondo.jpeg',
+    'bannerseccionmedallas.jpeg',
+    'medallasenselimits.png',
+    'medallasinfondo.png',
+    'medallas_partetrasera.png',
+    'valencia_xiques_reverso.jpg',
+    '01_ch_sueca_handbol.png',
+  ]),
+  ...g('merchandising', 'merch', [
+    'copitas_ad_esperanza.jpeg',
+    '01_llaveros_club.png',
+    '03_llaveros.png',
+    '02_figuritas.png',
+    '05_pin_falla.png',
+    '06_imanes.png',
+    'imanes_regalo.png',
+    '_carta_llaveros.jpeg',
+  ]),
+  ...g('qrs', 'qr', [
+    'sushiroom_delantero.png',
+    'caquitin.png',
+    'sushiroom_de_lado.png',
+  ]),
+];
