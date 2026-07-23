@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { QRS, SITE } from '../site';
+import { FEATURES, QRS, SITE } from '../site';
 import { RevealDirective } from '../shared/reveal.directive';
 import { ParallaxDirective } from '../shared/parallax.directive';
 
@@ -27,6 +27,7 @@ export class HomeComponent {
   private readonly sanitizer = inject(DomSanitizer);
 
   readonly site = SITE;
+  readonly features = FEATURES;
 
   readonly qrs = QRS;
 

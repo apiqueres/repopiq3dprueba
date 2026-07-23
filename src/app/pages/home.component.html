@@ -71,29 +71,31 @@
   </article>
 </section>
 
-<!-- ============ QRS PARA HOSTELERÍA ============ -->
-<section class="qr">
-  <div class="container">
-    <h2 class="headline light" appReveal>QRs para<br />hostelería</h2>
-    <p class="body-md qr-copy" appReveal [revealDelay]="120">
-      Soportes elegantes y duraderos. La primera impresión cuenta: haz que tu
-      carta digital sea parte de la decoración.
-    </p>
-    <a class="btn btn-outline light-btn" routerLink="/qrs" appReveal [revealDelay]="220">Catálogo QR</a>
+<!-- ============ QRS PARA HOSTELERÍA (oculto temporalmente) ============ -->
+@if (features.qrs) {
+  <section class="qr">
+    <div class="container">
+      <h2 class="headline light" appReveal>QRs para<br />hostelería</h2>
+      <p class="body-md qr-copy" appReveal [revealDelay]="120">
+        Soportes elegantes y duraderos. La primera impresión cuenta: haz que tu
+        carta digital sea parte de la decoración.
+      </p>
+      <a class="btn btn-outline light-btn" routerLink="/qrs" appReveal [revealDelay]="220">Catálogo QR</a>
 
-    <div class="qr-cards">
-      @for (q of qrs; track q.img; let i = $index) {
-        <article class="qr-card" appReveal [revealDelay]="i * 100">
-          <div class="qr-img">
-            <img [src]="q.img" [alt]="q.name" loading="lazy" />
-          </div>
-          <h3 class="label qr-name">{{ q.name }}</h3>
-          <p class="qr-tag">{{ q.tag }}</p>
-        </article>
-      }
+      <div class="qr-cards">
+        @for (q of qrs; track q.img; let i = $index) {
+          <article class="qr-card" appReveal [revealDelay]="i * 100">
+            <div class="qr-img">
+              <img [src]="q.img" [alt]="q.name" loading="lazy" />
+            </div>
+            <h3 class="label qr-name">{{ q.name }}</h3>
+            <p class="qr-tag">{{ q.tag }}</p>
+          </article>
+        }
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+}
 
 <!-- ============ MATERIAL / SOSTENIBILIDAD ============ -->
 <section class="pla">

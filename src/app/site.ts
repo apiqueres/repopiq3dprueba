@@ -1,3 +1,12 @@
+/**
+ * Interruptores de secciones.
+ * Para volver a mostrar los QRs en toda la web, pon `qrs: true`
+ * y descomenta la ruta 'qrs' en app.routes.ts.
+ */
+export const FEATURES = {
+  qrs: false,
+};
+
 /** Datos de contacto y catálogo del sitio. */
 export const SITE = {
   whatsapp: 'https://wa.me/34623754444?text=Hola%20PIQ3D%2C%20quiero%20pedir%20presupuesto',

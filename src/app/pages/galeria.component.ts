@@ -1,5 +1,5 @@
 import { Component, HostListener, computed, effect, signal } from '@angular/core';
-import { GALERIA, GaleriaItem } from '../site';
+import { FEATURES, GALERIA, GaleriaItem } from '../site';
 import { RevealDirective } from '../shared/reveal.directive';
 
 const LABELS: Record<string, string> = {
@@ -7,8 +7,11 @@ const LABELS: Record<string, string> = {
   trofeos: 'Trofeos',
   medallas: 'Medallas',
   merchandising: 'Merchandising',
-  qrs: 'QRs',
+  ...(FEATURES.qrs ? { qrs: 'QRs' } : {}),
 };
+
+// Mientras los QRs estén ocultos, no se muestran sus imágenes en la galería
+const ITEMS: GaleriaItem[] = FEATURES.qrs ? GALERIA : GALERIA.filter(i => i.cat !== 'qrs');
 
 @Component({
   selector: 'app-galeria',
@@ -22,7 +25,7 @@ export class GaleriaComponent {
 
   readonly filter = signal('todos');
   readonly items = computed<GaleriaItem[]>(() =>
-    this.filter() === 'todos' ? GALERIA : GALERIA.filter(i => i.cat === this.filter()),
+    this.filter() === 'todos' ? ITEMS : ITEMS.filter(i => i.cat === this.filter()),
   );
 
   /** índice del elemento abierto en el visor, o null si está cerrado */

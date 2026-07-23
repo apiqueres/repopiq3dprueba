@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SITE } from '../site';
+import { FEATURES, SITE } from '../site';
 
 @Component({
   selector: 'app-footer',
@@ -21,7 +21,9 @@ import { SITE } from '../site';
               <li><a routerLink="/trofeos">Trofeos</a></li>
               <li><a routerLink="/medallas">Medallas</a></li>
               <li><a routerLink="/merchandising">Llaveros</a></li>
-              <li><a routerLink="/qrs">QRs</a></li>
+              @if (features.qrs) {
+                <li><a routerLink="/qrs">QRs</a></li>
+              }
             </ul>
           </div>
           <div>
@@ -33,15 +35,6 @@ import { SITE } from '../site';
               <li>{{ site.ubicacion }}</li>
             </ul>
           </div>
-        </div>
-
-        <div class="news">
-          <p class="label col-title">Newsletter</p>
-          <p class="body-md hint">Recibe noticias sobre nuevos materiales y proyectos.</p>
-          <form class="news-form" (submit)="$event.preventDefault()">
-            <input type="email" placeholder="Tu email" aria-label="Tu email" />
-            <button class="btn btn-accent send" type="submit" aria-label="Suscribirme">→</button>
-          </form>
         </div>
 
         <div class="legal">
@@ -108,5 +101,6 @@ import { SITE } from '../site';
 })
 export class FooterComponent {
   readonly site = SITE;
+  readonly features = FEATURES;
   readonly year = new Date().getFullYear();
 }

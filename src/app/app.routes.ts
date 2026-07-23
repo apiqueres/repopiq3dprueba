@@ -8,7 +8,8 @@ export const routes: Routes = [
   { path: 'trofeos', component: CategoriaComponent, data: { slug: 'trofeos' }, title: 'Trofeos · PIQ3D' },
   { path: 'medallas', component: CategoriaComponent, data: { slug: 'medallas' }, title: 'Medallas · PIQ3D' },
   { path: 'merchandising', component: CategoriaComponent, data: { slug: 'merchandising' }, title: 'Merchandising · PIQ3D' },
-  { path: 'qrs', component: CategoriaComponent, data: { slug: 'qrs' }, title: 'QRs personalizados · PIQ3D' },
+  // QRs oculto temporalmente — descomentar para volver a mostrar (ver FEATURES.qrs en site.ts)
+  // { path: 'qrs', component: CategoriaComponent, data: { slug: 'qrs' }, title: 'QRs personalizados · PIQ3D' },
   { path: 'galeria', component: GaleriaComponent, title: 'Galería · PIQ3D' },
   { path: '**', redirectTo: '' },
 ];

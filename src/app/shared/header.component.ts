@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { SITE } from '../site';
+import { FEATURES, SITE } from '../site';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +17,9 @@ import { SITE } from '../site';
         <a routerLink="/trofeos" routerLinkActive="active">Trofeos</a>
         <a routerLink="/medallas" routerLinkActive="active">Medallas</a>
         <a routerLink="/merchandising" routerLinkActive="active">Merchandising</a>
-        <a routerLink="/qrs" routerLinkActive="active">QRs</a>
+        @if (features.qrs) {
+          <a routerLink="/qrs" routerLinkActive="active">QRs</a>
+        }
       </nav>
     </div>
   `,
@@ -103,4 +105,5 @@ import { SITE } from '../site';
 })
 export class HeaderComponent {
   readonly wa = SITE.whatsapp;
+  readonly features = FEATURES;
 }
