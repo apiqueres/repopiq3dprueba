@@ -26,7 +26,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
     titleAccent: 'victorias',
     intro:
       'Diseño y fabricación aditiva de alta precisión para eventos que buscan la excelencia. Piezas únicas que perduran en el tiempo.',
-    heroImg: 'assets/img/trofeos/07_trofeu_puchades.png',
+    heroImg: 'assets/img/trofeos/bannertrofeos.jpeg',
     products: TROFEOS,
     steps: [
       { title: 'Nos cuentas tu idea', copy: 'Analizamos tus necesidades, el propósito del evento y el estilo que buscas transmitir.' },
@@ -82,7 +82,7 @@ const CATEGORIES: Record<string, CategoryContent> = {
       { title: 'Imprimimos y entregamos', copy: 'Piezas duraderas y fáciles de limpiar, listas para colocar en cada mesa.' },
     ],
     quote: 'Los clientes escanean la carta y siempre preguntan por el soporte.',
-    quoteImg: 'assets/img/qr/sushiroom_delantero.png',
+    quoteImg: 'assets/img/qr/sushiroom_cerca.jpeg',
   },
 };
 

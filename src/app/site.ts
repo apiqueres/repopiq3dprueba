@@ -41,9 +41,9 @@ export const MERCH: Product[] = [
 ];
 
 export const QRS: Product[] = [
-  { img: 'assets/img/qr/sushiroom_delantero.png', name: 'The Sushi Room', tag: 'QR + NFC integrado' },
+  { img: 'assets/img/qr/sushiroom_cerca.jpeg', name: 'The Sushi Room', tag: 'QR + NFC integrado' },
   { img: 'assets/img/qr/caquitin.png', name: 'Ca Quintín', tag: 'Soporte bicolor' },
-  { img: 'assets/img/qr/sushiroom_de_lado.png', name: 'Vista de perfil', tag: 'Diseño esbelto' },
+  { img: 'assets/img/qr/sushiroom_mesa.jpeg', name: 'The Sushi Room · En sala', tag: 'Carta en cada mesa' },
 ];
 
 /* ---------- Galería completa (página oculta /galeria) ---------- */
@@ -95,8 +95,10 @@ export const GALERIA: GaleriaItem[] = [
     '_carta_llaveros.jpeg',
   ]),
   ...g('qrs', 'qr', [
-    'sushiroom_delantero.png',
+    'sushiroom_cerca.jpeg',
+    'sushiroom_mesa.jpeg',
     'caquitin.png',
+    'sushiroom_delantero.png',
     'sushiroom_de_lado.png',
   ]),
 ];
